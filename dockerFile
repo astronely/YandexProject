@@ -3,4 +3,4 @@ WORKDIR /mysite
 COPY ./ /mysite
 RUN apk update && pip install -r /mysite/requirements.txt
 EXPOSE 8000
-CMD ["python", "manage.py", "runserver", "62.84.118.57:1194"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:80"]
