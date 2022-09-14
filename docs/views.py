@@ -1,5 +1,4 @@
 from rest_framework.response import Response
-from django.http import HttpResponse, JsonResponse
 from rest_framework.views import APIView
 from docs.serializers import ItemImportSerializer,\
 	ItemUpdateSerializer
