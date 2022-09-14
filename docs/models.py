@@ -4,7 +4,7 @@ class Item(models.Model):
 	class Meta:
 		db_table = 'SystemItem'
 
-	TYPES = [('FILE','File'), ('FOLDER','Folder')]
+	TYPES = (('FILE','File'), ('FOLDER','Folder'))
 	id = models.CharField(max_length=64, unique=True, primary_key=True)
 	url = models.CharField(max_length=128, blank=True)
 	date = models.CharField(max_length=128)
