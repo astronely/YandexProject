@@ -25,6 +25,6 @@ jobs:
         run: echo ${{ secrets.DOCKER_TOKEN}} | docker login -u ${{ secrets.DOCKER_LOGIN }} --password-stdin
       - uses: actions/checkout@master
       - name: Build image
-        run: docker build -t $LOGIN/$NAME:${GITHUB_REF:11} -f dockerFile
+        run: docker build -t $LOGIN/$NAME:${GITHUB_REF:11} -f dockerFile .
       - name: Push image to docker
         run: docker push $LOGIN/$NAME:${GITHUB_REF:11}
