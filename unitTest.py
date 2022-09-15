@@ -293,7 +293,7 @@ def main():
     if test_name is None:
         test_import()
         test_nodes()
-        #test_delete()
+        test_delete()
     else:
         test_func = globals().get(f"test_{test_name}")
         if not test_func:
